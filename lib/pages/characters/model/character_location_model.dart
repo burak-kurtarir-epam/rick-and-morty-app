@@ -12,4 +12,9 @@ class CharacterLocationModel with _$CharacterLocationModel {
 
   factory CharacterLocationModel.fromJson(Map<String, dynamic> json) =>
       _$CharacterLocationModelFromJson(json);
+
+  static CharacterLocationModel get sample {
+    return CharacterLocationModel(
+        name: "Earth", url: "https://rickandmortyapi.com/api/location/1");
+  }
 }

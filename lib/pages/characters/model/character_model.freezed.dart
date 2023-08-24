@@ -24,7 +24,7 @@ mixin _$CharacterModel {
   String? get name => throw _privateConstructorUsedError;
   String? get status => throw _privateConstructorUsedError;
   String? get species => throw _privateConstructorUsedError;
-  String? get typ => throw _privateConstructorUsedError;
+  String? get type => throw _privateConstructorUsedError;
   String? get gender => throw _privateConstructorUsedError;
   CharacterLocationModel? get origin => throw _privateConstructorUsedError;
   CharacterLocationModel? get location => throw _privateConstructorUsedError;
@@ -50,7 +50,7 @@ abstract class $CharacterModelCopyWith<$Res> {
       String? name,
       String? status,
       String? species,
-      String? typ,
+      String? type,
       String? gender,
       CharacterLocationModel? origin,
       CharacterLocationModel? location,
@@ -80,7 +80,7 @@ class _$CharacterModelCopyWithImpl<$Res, $Val extends CharacterModel>
     Object? name = freezed,
     Object? status = freezed,
     Object? species = freezed,
-    Object? typ = freezed,
+    Object? type = freezed,
     Object? gender = freezed,
     Object? origin = freezed,
     Object? location = freezed,
@@ -106,9 +106,9 @@ class _$CharacterModelCopyWithImpl<$Res, $Val extends CharacterModel>
           ? _value.species
           : species // ignore: cast_nullable_to_non_nullable
               as String?,
-      typ: freezed == typ
-          ? _value.typ
-          : typ // ignore: cast_nullable_to_non_nullable
+      type: freezed == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
               as String?,
       gender: freezed == gender
           ? _value.gender
@@ -179,7 +179,7 @@ abstract class _$$_CharacterModelCopyWith<$Res>
       String? name,
       String? status,
       String? species,
-      String? typ,
+      String? type,
       String? gender,
       CharacterLocationModel? origin,
       CharacterLocationModel? location,
@@ -209,7 +209,7 @@ class __$$_CharacterModelCopyWithImpl<$Res>
     Object? name = freezed,
     Object? status = freezed,
     Object? species = freezed,
-    Object? typ = freezed,
+    Object? type = freezed,
     Object? gender = freezed,
     Object? origin = freezed,
     Object? location = freezed,
@@ -235,9 +235,9 @@ class __$$_CharacterModelCopyWithImpl<$Res>
           ? _value.species
           : species // ignore: cast_nullable_to_non_nullable
               as String?,
-      typ: freezed == typ
-          ? _value.typ
-          : typ // ignore: cast_nullable_to_non_nullable
+      type: freezed == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
               as String?,
       gender: freezed == gender
           ? _value.gender
@@ -279,7 +279,7 @@ class _$_CharacterModel implements _CharacterModel {
       this.name,
       this.status,
       this.species,
-      this.typ,
+      this.type,
       this.gender,
       this.origin,
       this.location,
@@ -301,7 +301,7 @@ class _$_CharacterModel implements _CharacterModel {
   @override
   final String? species;
   @override
-  final String? typ;
+  final String? type;
   @override
   final String? gender;
   @override
@@ -327,7 +327,7 @@ class _$_CharacterModel implements _CharacterModel {
 
   @override
   String toString() {
-    return 'CharacterModel(id: $id, name: $name, status: $status, species: $species, typ: $typ, gender: $gender, origin: $origin, location: $location, image: $image, episode: $episode, url: $url, created: $created)';
+    return 'CharacterModel(id: $id, name: $name, status: $status, species: $species, type: $type, gender: $gender, origin: $origin, location: $location, image: $image, episode: $episode, url: $url, created: $created)';
   }
 
   @override
@@ -339,7 +339,7 @@ class _$_CharacterModel implements _CharacterModel {
             (identical(other.name, name) || other.name == name) &&
             (identical(other.status, status) || other.status == status) &&
             (identical(other.species, species) || other.species == species) &&
-            (identical(other.typ, typ) || other.typ == typ) &&
+            (identical(other.type, type) || other.type == type) &&
             (identical(other.gender, gender) || other.gender == gender) &&
             (identical(other.origin, origin) || other.origin == origin) &&
             (identical(other.location, location) ||
@@ -358,7 +358,7 @@ class _$_CharacterModel implements _CharacterModel {
       name,
       status,
       species,
-      typ,
+      type,
       gender,
       origin,
       location,
@@ -387,7 +387,7 @@ abstract class _CharacterModel implements CharacterModel {
       final String? name,
       final String? status,
       final String? species,
-      final String? typ,
+      final String? type,
       final String? gender,
       final CharacterLocationModel? origin,
       final CharacterLocationModel? location,
@@ -408,7 +408,7 @@ abstract class _CharacterModel implements CharacterModel {
   @override
   String? get species;
   @override
-  String? get typ;
+  String? get type;
   @override
   String? get gender;
   @override

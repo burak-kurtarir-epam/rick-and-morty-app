@@ -12,7 +12,7 @@ _$_CharacterModel _$$_CharacterModelFromJson(Map<String, dynamic> json) =>
       name: json['name'] as String?,
       status: json['status'] as String?,
       species: json['species'] as String?,
-      typ: json['typ'] as String?,
+      type: json['type'] as String?,
       gender: json['gender'] as String?,
       origin: json['origin'] == null
           ? null
@@ -37,7 +37,7 @@ Map<String, dynamic> _$$_CharacterModelToJson(_$_CharacterModel instance) =>
       'name': instance.name,
       'status': instance.status,
       'species': instance.species,
-      'typ': instance.typ,
+      'type': instance.type,
       'gender': instance.gender,
       'origin': instance.origin,
       'location': instance.location,
