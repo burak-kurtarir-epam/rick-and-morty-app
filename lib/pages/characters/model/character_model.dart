@@ -1,39 +1,26 @@
-class CharacterModel {
-  final int? id;
-  final String? name;
-  final String? status;
-  final String? species;
-  final String? type;
-  final String? gender;
-  final Location? origin;
-  final Location? location;
-  final String? image;
-  final List<String>? episode;
-  final String? url;
-  final DateTime? created;
+import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:rick_and_morty_app/pages/characters/model/character_location_model.dart';
 
-  const CharacterModel({
-    this.id,
-    this.name,
-    this.status,
-    this.species,
-    this.type,
-    this.gender,
-    this.origin,
-    this.location,
-    this.image,
-    this.episode,
-    this.url,
-    this.created,
-  });
-}
+part 'character_model.freezed.dart';
+part 'character_model.g.dart';
 
-class Location {
-  final String? name;
-  final String? url;
+@freezed
+class CharacterModel with _$CharacterModel {
+  factory CharacterModel({
+    int? id,
+    String? name,
+    String? status,
+    String? species,
+    String? typ,
+    String? gender,
+    CharacterLocationModel? origin,
+    CharacterLocationModel? location,
+    String? image,
+    List<String>? episode,
+    String? url,
+    DateTime? created,
+  }) = _CharacterModel;
 
-  const Location({
-    this.name,
-    this.url,
-  });
+  factory CharacterModel.fromJson(Map<String, dynamic> json) =>
+      _$CharacterModelFromJson(json);
 }
