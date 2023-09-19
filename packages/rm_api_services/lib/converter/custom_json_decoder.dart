@@ -48,6 +48,8 @@ class CustomJsonDecoder {
   }
 }
 
+final jsonDecoder = CustomJsonDecoder(generatedMapping);
+
 class JsonSerializableConverter extends JsonConverter {
   @override
   FutureOr<Response<BodyType>> convertResponse<BodyType, InnerType>(Response response) async {
@@ -60,5 +62,3 @@ class JsonSerializableConverter extends JsonConverter {
         body: jsonDecoder.decode<InnerType>(jsonRes.body) as BodyType);
   }
 }
-
-final jsonDecoder = CustomJsonDecoder(generatedMapping);

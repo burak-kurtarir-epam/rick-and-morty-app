@@ -10,8 +10,8 @@ class CharacterOutput {
   final String? species;
   final String? type;
   final String? gender;
-  final LocationOutput? origin;
-  final LocationOutput? location;
+  final CharacterLocationOutput? origin;
+  final CharacterLocationOutput? location;
   final String? image;
   final List<String>? episode;
   final String? url;
@@ -36,14 +36,15 @@ class CharacterOutput {
 }
 
 @JsonSerializable()
-class LocationOutput {
+class CharacterLocationOutput {
   final String? name;
   final String? url;
 
-  const LocationOutput({
+  const CharacterLocationOutput({
     this.name,
     this.url,
   });
 
-  factory LocationOutput.fromJson(Map<String, dynamic> json) => _$LocationOutputFromJson(json);
+  factory CharacterLocationOutput.fromJson(Map<String, dynamic> json) =>
+      _$CharacterLocationOutputFromJson(json);
 }

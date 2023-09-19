@@ -16,10 +16,12 @@ CharacterOutput _$CharacterOutputFromJson(Map<String, dynamic> json) =>
       gender: json['gender'] as String?,
       origin: json['origin'] == null
           ? null
-          : LocationOutput.fromJson(json['origin'] as Map<String, dynamic>),
+          : CharacterLocationOutput.fromJson(
+              json['origin'] as Map<String, dynamic>),
       location: json['location'] == null
           ? null
-          : LocationOutput.fromJson(json['location'] as Map<String, dynamic>),
+          : CharacterLocationOutput.fromJson(
+              json['location'] as Map<String, dynamic>),
       image: json['image'] as String?,
       episode:
           (json['episode'] as List<dynamic>?)?.map((e) => e as String).toList(),
@@ -45,13 +47,15 @@ Map<String, dynamic> _$CharacterOutputToJson(CharacterOutput instance) =>
       'created': instance.created?.toIso8601String(),
     };
 
-LocationOutput _$LocationOutputFromJson(Map<String, dynamic> json) =>
-    LocationOutput(
+CharacterLocationOutput _$CharacterLocationOutputFromJson(
+        Map<String, dynamic> json) =>
+    CharacterLocationOutput(
       name: json['name'] as String?,
       url: json['url'] as String?,
     );
 
-Map<String, dynamic> _$LocationOutputToJson(LocationOutput instance) =>
+Map<String, dynamic> _$CharacterLocationOutputToJson(
+        CharacterLocationOutput instance) =>
     <String, dynamic>{
       'name': instance.name,
       'url': instance.url,
