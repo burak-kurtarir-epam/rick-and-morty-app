@@ -31,12 +31,17 @@ dependencies:
   flutter:
     sdk: flutter
 
-  # State management
-  flutter_riverpod: ^2.3.7
+  # Network
+  chopper: ^7.0.6
+  rm_api_services:
+    path: packages/rm_api_services
+
+  # State management & Dependency injection
+  riverpod: ^2.4.0
+  flutter_riverpod: ^2.4.0
 
   # Code generation for data classes
   freezed_annotation: ^2.4.1
-  json_annotation: ^4.8.1
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -49,7 +54,6 @@ dev_dependencies:
   # Code generation for data classes
   freezed: ^2.4.2
   build_runner: ^2.4.6
-  json_serializable: ^6.7.1
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
