@@ -26,7 +26,10 @@ final getAllCharactersUseCaseProvider = Provider<GetAllCharactersUseCase>((ref) 
 
 final characterListPageManagerProvider =
     StateNotifierProvider.autoDispose<CharacterListPageManager, CharacterListPageState>((ref) {
-  final manager = CharacterListPageManager(ref.read(getAllCharactersUseCaseProvider));
+  final manager = CharacterListPageManager(
+    ref.read(getAllCharactersUseCaseProvider),
+    ref.read(safeExecutorManagerProvider),
+  );
 
   manager.onInit();
 

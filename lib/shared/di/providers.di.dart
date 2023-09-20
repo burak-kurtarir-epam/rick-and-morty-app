@@ -1,11 +1,12 @@
 import 'package:chopper/chopper.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:rick_and_morty_app/shared/constants/api_urls.dart';
+import 'package:rick_and_morty_app/shared/presentation/managers/safe_executor_manager.dart';
 import 'package:rm_api_services/rm_api_services.dart';
 
 // Api Services
 
-final apiUrlsProvider = Provider((ref) {
+final apiUrlsProvider = Provider<ApiUrls>((ref) {
   return const ApiUrls();
 });
 
@@ -22,4 +23,9 @@ final characterServiceProvider = Provider<CharacterService>((ref) {
   return CharacterService.create(
     client: ref.read(chopperClientProvider(characterUrl)),
   );
+});
+
+// SafeExecutorManager
+final safeExecutorManagerProvider = Provider<SafeExecutorManager>((ref) {
+  return SafeExecutorManager();
 });

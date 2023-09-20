@@ -21,7 +21,7 @@ mixin _$ResponseState {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function() success,
-    required TResult Function(ProblemOutputEntity problem) error,
+    required TResult Function(String message) error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -29,7 +29,7 @@ mixin _$ResponseState {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function()? success,
-    TResult? Function(ProblemOutputEntity problem)? error,
+    TResult? Function(String message)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -37,7 +37,7 @@ mixin _$ResponseState {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function()? success,
-    TResult Function(ProblemOutputEntity problem)? error,
+    TResult Function(String message)? error,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -104,8 +104,8 @@ class __$$InitialStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$InitialState implements InitialState {
-  const _$InitialState();
+class _$InitialState extends InitialState {
+  const _$InitialState() : super._();
 
   @override
   String toString() {
@@ -127,7 +127,7 @@ class _$InitialState implements InitialState {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function() success,
-    required TResult Function(ProblemOutputEntity problem) error,
+    required TResult Function(String message) error,
   }) {
     return initial();
   }
@@ -138,7 +138,7 @@ class _$InitialState implements InitialState {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function()? success,
-    TResult? Function(ProblemOutputEntity problem)? error,
+    TResult? Function(String message)? error,
   }) {
     return initial?.call();
   }
@@ -149,7 +149,7 @@ class _$InitialState implements InitialState {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function()? success,
-    TResult Function(ProblemOutputEntity problem)? error,
+    TResult Function(String message)? error,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -196,8 +196,9 @@ class _$InitialState implements InitialState {
   }
 }
 
-abstract class InitialState implements ResponseState {
+abstract class InitialState extends ResponseState {
   const factory InitialState() = _$InitialState;
+  const InitialState._() : super._();
 }
 
 /// @nodoc
@@ -218,8 +219,8 @@ class __$$LoadingStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$LoadingState implements LoadingState {
-  const _$LoadingState();
+class _$LoadingState extends LoadingState {
+  const _$LoadingState() : super._();
 
   @override
   String toString() {
@@ -241,7 +242,7 @@ class _$LoadingState implements LoadingState {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function() success,
-    required TResult Function(ProblemOutputEntity problem) error,
+    required TResult Function(String message) error,
   }) {
     return loading();
   }
@@ -252,7 +253,7 @@ class _$LoadingState implements LoadingState {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function()? success,
-    TResult? Function(ProblemOutputEntity problem)? error,
+    TResult? Function(String message)? error,
   }) {
     return loading?.call();
   }
@@ -263,7 +264,7 @@ class _$LoadingState implements LoadingState {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function()? success,
-    TResult Function(ProblemOutputEntity problem)? error,
+    TResult Function(String message)? error,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -310,8 +311,9 @@ class _$LoadingState implements LoadingState {
   }
 }
 
-abstract class LoadingState implements ResponseState {
+abstract class LoadingState extends ResponseState {
   const factory LoadingState() = _$LoadingState;
+  const LoadingState._() : super._();
 }
 
 /// @nodoc
@@ -332,8 +334,8 @@ class __$$SuccessStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$SuccessState implements SuccessState {
-  const _$SuccessState();
+class _$SuccessState extends SuccessState {
+  const _$SuccessState() : super._();
 
   @override
   String toString() {
@@ -355,7 +357,7 @@ class _$SuccessState implements SuccessState {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function() success,
-    required TResult Function(ProblemOutputEntity problem) error,
+    required TResult Function(String message) error,
   }) {
     return success();
   }
@@ -366,7 +368,7 @@ class _$SuccessState implements SuccessState {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function()? success,
-    TResult? Function(ProblemOutputEntity problem)? error,
+    TResult? Function(String message)? error,
   }) {
     return success?.call();
   }
@@ -377,7 +379,7 @@ class _$SuccessState implements SuccessState {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function()? success,
-    TResult Function(ProblemOutputEntity problem)? error,
+    TResult Function(String message)? error,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -424,8 +426,9 @@ class _$SuccessState implements SuccessState {
   }
 }
 
-abstract class SuccessState implements ResponseState {
+abstract class SuccessState extends ResponseState {
   const factory SuccessState() = _$SuccessState;
+  const SuccessState._() : super._();
 }
 
 /// @nodoc
@@ -434,9 +437,7 @@ abstract class _$$ErrorStateCopyWith<$Res> {
           _$ErrorState value, $Res Function(_$ErrorState) then) =
       __$$ErrorStateCopyWithImpl<$Res>;
   @useResult
-  $Res call({ProblemOutputEntity problem});
-
-  $ProblemOutputEntityCopyWith<$Res> get problem;
+  $Res call({String message});
 }
 
 /// @nodoc
@@ -450,38 +451,29 @@ class __$$ErrorStateCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? problem = null,
+    Object? message = null,
   }) {
     return _then(_$ErrorState(
-      problem: null == problem
-          ? _value.problem
-          : problem // ignore: cast_nullable_to_non_nullable
-              as ProblemOutputEntity,
+      message: null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $ProblemOutputEntityCopyWith<$Res> get problem {
-    return $ProblemOutputEntityCopyWith<$Res>(_value.problem, (value) {
-      return _then(_value.copyWith(problem: value));
-    });
   }
 }
 
 /// @nodoc
 
-class _$ErrorState implements ErrorState {
-  const _$ErrorState(
-      {this.problem = const ProblemOutputEntity(error: _kDefaultErrorMessage)});
+class _$ErrorState extends ErrorState {
+  const _$ErrorState({this.message = _kDefaultErrorMessage}) : super._();
 
   @override
   @JsonKey()
-  final ProblemOutputEntity problem;
+  final String message;
 
   @override
   String toString() {
-    return 'ResponseState.error(problem: $problem)';
+    return 'ResponseState.error(message: $message)';
   }
 
   @override
@@ -489,11 +481,11 @@ class _$ErrorState implements ErrorState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ErrorState &&
-            (identical(other.problem, problem) || other.problem == problem));
+            (identical(other.message, message) || other.message == message));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, problem);
+  int get hashCode => Object.hash(runtimeType, message);
 
   @JsonKey(ignore: true)
   @override
@@ -507,9 +499,9 @@ class _$ErrorState implements ErrorState {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function() success,
-    required TResult Function(ProblemOutputEntity problem) error,
+    required TResult Function(String message) error,
   }) {
-    return error(problem);
+    return error(message);
   }
 
   @override
@@ -518,9 +510,9 @@ class _$ErrorState implements ErrorState {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function()? success,
-    TResult? Function(ProblemOutputEntity problem)? error,
+    TResult? Function(String message)? error,
   }) {
-    return error?.call(problem);
+    return error?.call(message);
   }
 
   @override
@@ -529,11 +521,11 @@ class _$ErrorState implements ErrorState {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function()? success,
-    TResult Function(ProblemOutputEntity problem)? error,
+    TResult Function(String message)? error,
     required TResult orElse(),
   }) {
     if (error != null) {
-      return error(problem);
+      return error(message);
     }
     return orElse();
   }
@@ -576,10 +568,11 @@ class _$ErrorState implements ErrorState {
   }
 }
 
-abstract class ErrorState implements ResponseState {
-  const factory ErrorState({final ProblemOutputEntity problem}) = _$ErrorState;
+abstract class ErrorState extends ResponseState {
+  const factory ErrorState({final String message}) = _$ErrorState;
+  const ErrorState._() : super._();
 
-  ProblemOutputEntity get problem;
+  String get message;
   @JsonKey(ignore: true)
   _$$ErrorStateCopyWith<_$ErrorState> get copyWith =>
       throw _privateConstructorUsedError;
