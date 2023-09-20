@@ -51,6 +51,29 @@ android {
         versionName flutterVersionName
     }
 
+    flavorDimensions "default"
+
+    productFlavors {
+        dev {
+            dimension "default"
+            resValue "string", "app_name", "Rick and Morty [dev]"
+            applicationId "com.example.rick_and_morty_app.dev"
+        }
+
+        uat {
+            dimension "default"
+            resValue "string", "app_name", "Rick and Morty [uat]"
+            applicationId "com.example.rick_and_morty_app.uat"
+        }
+
+        prod {
+            dimension "default"
+            resValue "string", "app_name", "Rick and Morty"
+            applicationId "com.example.rick_and_morty_app"
+        }
+    }
+
+
     buildTypes {
         release {
             // TODO: Add your own signing config for the release build.

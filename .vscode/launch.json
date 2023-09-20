@@ -5,21 +5,118 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "rick_and_morty_app",
-            "request": "launch",
-            "type": "dart"
-        },
-        {
-            "name": "rick_and_morty_app (profile mode)",
+            "name": "Rick and Morty dev",
             "request": "launch",
             "type": "dart",
-            "flutterMode": "profile"
+            "program": "lib/main_dev.dart",
+            "args": [
+                "--flavor",
+                "dev",
+                "--target",
+                "lib/main_dev.dart"
+            ]
         },
         {
-            "name": "rick_and_morty_app (release mode)",
+            "name": "Rick and Morty dev (profile mode)",
             "request": "launch",
             "type": "dart",
-            "flutterMode": "release"
-        }
+            "flutterMode": "profile",
+            "program": "lib/main_dev.dart",
+            "args": [
+                "--flavor",
+                "dev",
+                "--target",
+                "lib/main_dev.dart"
+            ]
+        },
+        {
+            "name": "Rick and Morty dev (release mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release",
+            "program": "lib/main_dev.dart",
+            "args": [
+                "--flavor",
+                "dev",
+                "--target",
+                "lib/main_dev.dart"
+            ]
+        },
+        {
+            "name": "Rick and Morty uat",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_uat.dart",
+            "args": [
+                "--flavor",
+                "uat",
+                "--target",
+                "lib/main_uat.dart"
+            ]
+        },
+        {
+            "name": "Rick and Morty uat (profile mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile",
+            "program": "lib/main_uat.dart",
+            "args": [
+                "--flavor",
+                "uat",
+                "--target",
+                "lib/main_uat.dart"
+            ]
+        },
+        {
+            "name": "Rick and Morty uat (release mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release",
+            "program": "lib/main_uat.dart",
+            "args": [
+                "--flavor",
+                "uat",
+                "--target",
+                "lib/main_uat.dart"
+            ]
+        },
+        {
+            "name": "Rick and Morty prod",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_prod.dart",
+            "args": [
+                "--flavor",
+                "prod",
+                "--target",
+                "lib/main_prod.dart"
+            ]
+        },
+        {
+            "name": "Rick and Morty prod (profile mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile",
+            "program": "lib/main_prod.dart",
+            "args": [
+                "--flavor",
+                "prod",
+                "--target",
+                "lib/main_prod.dart"
+            ]
+        },
+        {
+            "name": "Rick and Morty prod (release mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release",
+            "program": "lib/main_prod.dart",
+            "args": [
+                "--flavor",
+                "prod",
+                "--target",
+                "lib/main_prod.dart"
+            ]
+        },
     ]
 }
