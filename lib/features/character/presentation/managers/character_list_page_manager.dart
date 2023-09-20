@@ -1,4 +1,4 @@
-import 'package:rick_and_morty_app/features/character/domain/use_cases/get_all_characters_use_case.dart';
+import 'package:rick_and_morty_app/features/character/domain/use_cases/character_use_cases.dart';
 import 'package:rick_and_morty_app/features/character/presentation/managers/character_list_page_state.dart';
 import 'package:rick_and_morty_app/shared/data/repositories/base_response_state.dart';
 import 'package:rick_and_morty_app/shared/presentation/managers/base_state_manager.dart';
