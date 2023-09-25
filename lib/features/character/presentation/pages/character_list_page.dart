@@ -22,6 +22,7 @@ class CharacterListPage extends ConsumerWidget {
       body: _DetailsBody(
         characters: state.characterListEntity.results,
         responseState: state.responseState,
+        onBuildListItem: manager.loadMore,
       ),
     );
   }
@@ -30,11 +31,13 @@ class CharacterListPage extends ConsumerWidget {
 class _DetailsBody extends StatelessWidget {
   final List<CharacterEntity> characters;
   final ResponseState responseState;
+  final VoidCallback onBuildListItem;
 
   const _DetailsBody({
     Key? key,
     required this.characters,
     required this.responseState,
+    required this.onBuildListItem,
   }) : super(key: key);
 
   @override
@@ -50,6 +53,10 @@ class _DetailsBody extends StatelessWidget {
         itemCount: characters.length,
         itemBuilder: (BuildContext context, int index) {
           final data = characters[index];
+
+          if (index == characters.length - 1) {
+            onBuildListItem();
+          }
 
           return ListTile(
             title: Text(data.name),

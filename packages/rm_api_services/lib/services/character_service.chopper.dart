@@ -17,12 +17,14 @@ final class _$CharacterService extends CharacterService {
   final definitionType = CharacterService;
 
   @override
-  Future<Response<CharacterListOutput>> _getAll() {
+  Future<Response<CharacterListOutput>> _getAll({int? page}) {
     final Uri $url = Uri.parse('/');
+    final Map<String, dynamic> $params = <String, dynamic>{'page': page};
     final Request $request = Request(
       'GET',
       $url,
       client.baseUrl,
+      parameters: $params,
     );
     return client.send<CharacterListOutput, CharacterListOutput>($request);
   }

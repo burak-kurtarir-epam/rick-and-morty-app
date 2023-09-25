@@ -17,7 +17,15 @@ class CharacterListPageManager extends BaseStateManager<CharacterListPageState> 
     getAllCharacters();
   }
 
+  int page = 1;
+  bool get hasReachedMax {
+    return page >= state.characterListEntity.info.pages ||
+        state.characterListEntity.info.next.isEmpty;
+  }
+
   Future<void> getAllCharacters() async {
+    page = 1;
+
     state = state.copyWith(responseState: const ResponseState.loading());
 
     _safeExecutorManager.makeAsyncSafeExecution(
@@ -25,6 +33,29 @@ class CharacterListPageManager extends BaseStateManager<CharacterListPageState> 
       onSuccess: (result) {
         state = state.copyWith(
           characterListEntity: result,
+          responseState: const ResponseState.success(),
+        );
+      },
+      onError: (e) {
+        state = state.copyWith(responseState: ResponseState.error(message: e.toString()));
+      },
+    );
+  }
+
+  Future<void> loadMore() async {
+    if (hasReachedMax) {
+      return;
+    }
+
+    page += 1;
+
+    _safeExecutorManager.makeAsyncSafeExecution(
+      function: () => _getAllCharactersUseCase.execute(page: page),
+      onSuccess: (result) {
+        final characters = [...state.characterListEntity.results, ...result.results];
+
+        state = state.copyWith(
+          characterListEntity: result.copyWith(results: characters),
           responseState: const ResponseState.success(),
         );
       },

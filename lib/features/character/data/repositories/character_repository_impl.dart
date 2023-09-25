@@ -10,9 +10,9 @@ class CharacterRepositoryImpl extends BaseRepository implements CharacterReposit
   CharacterRepositoryImpl(this._characterService);
 
   @override
-  Future<CharacterListEntity> getAll() {
+  Future<CharacterListEntity> getAll({int? page}) {
     return executeApiCall(
-      invoker: _characterService.getAll,
+      invoker: () => _characterService.getAll(page: page),
       mapper: (result) => result.toEntity(),
     );
   }

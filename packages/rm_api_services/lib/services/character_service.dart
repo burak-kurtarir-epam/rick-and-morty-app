@@ -24,11 +24,15 @@ abstract class CharacterService extends ChopperService {
   }
 
   @Get(path: '/')
-  Future<Response<CharacterListOutput>> _getAll();
+  Future<Response<CharacterListOutput>> _getAll({
+    @Query() int? page,
+  });
 
-  Future<Response<CharacterListOutput>> getAll() async {
+  Future<Response<CharacterListOutput>> getAll({
+    int? page,
+  }) async {
     generatedMapping.putIfAbsent(CharacterListOutput, () => CharacterListOutput.fromJson);
 
-    return _getAll();
+    return _getAll(page: page);
   }
 }
