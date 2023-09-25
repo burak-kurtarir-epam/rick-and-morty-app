@@ -6,7 +6,7 @@ class GetAllCharactersUseCase {
 
   GetAllCharactersUseCase(this._characterRepository);
 
-  Future<CharacterListEntity> execute() async {
-    return _characterRepository.getAll();
+  Future<CharacterListEntity> execute({int? page}) async {
+    return _characterRepository.getAll(page: page);
   }
 }
