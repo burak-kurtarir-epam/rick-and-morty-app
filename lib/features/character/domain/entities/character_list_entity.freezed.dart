@@ -73,11 +73,11 @@ class _$CharacterListEntityCopyWithImpl<$Res, $Val extends CharacterListEntity>
 }
 
 /// @nodoc
-abstract class _$$_CharacterListEntityCopyWith<$Res>
+abstract class _$$CharacterListEntityImplCopyWith<$Res>
     implements $CharacterListEntityCopyWith<$Res> {
-  factory _$$_CharacterListEntityCopyWith(_$_CharacterListEntity value,
-          $Res Function(_$_CharacterListEntity) then) =
-      __$$_CharacterListEntityCopyWithImpl<$Res>;
+  factory _$$CharacterListEntityImplCopyWith(_$CharacterListEntityImpl value,
+          $Res Function(_$CharacterListEntityImpl) then) =
+      __$$CharacterListEntityImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({PaginationInfoEntity info, List<CharacterEntity> results});
@@ -87,11 +87,11 @@ abstract class _$$_CharacterListEntityCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CharacterListEntityCopyWithImpl<$Res>
-    extends _$CharacterListEntityCopyWithImpl<$Res, _$_CharacterListEntity>
-    implements _$$_CharacterListEntityCopyWith<$Res> {
-  __$$_CharacterListEntityCopyWithImpl(_$_CharacterListEntity _value,
-      $Res Function(_$_CharacterListEntity) _then)
+class __$$CharacterListEntityImplCopyWithImpl<$Res>
+    extends _$CharacterListEntityCopyWithImpl<$Res, _$CharacterListEntityImpl>
+    implements _$$CharacterListEntityImplCopyWith<$Res> {
+  __$$CharacterListEntityImplCopyWithImpl(_$CharacterListEntityImpl _value,
+      $Res Function(_$CharacterListEntityImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -100,7 +100,7 @@ class __$$_CharacterListEntityCopyWithImpl<$Res>
     Object? info = null,
     Object? results = null,
   }) {
-    return _then(_$_CharacterListEntity(
+    return _then(_$CharacterListEntityImpl(
       info: null == info
           ? _value.info
           : info // ignore: cast_nullable_to_non_nullable
@@ -115,8 +115,8 @@ class __$$_CharacterListEntityCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_CharacterListEntity implements _CharacterListEntity {
-  const _$_CharacterListEntity(
+class _$CharacterListEntityImpl implements _CharacterListEntity {
+  const _$CharacterListEntityImpl(
       {this.info = const PaginationInfoEntity(),
       final List<CharacterEntity> results = const []})
       : _results = results;
@@ -142,7 +142,7 @@ class _$_CharacterListEntity implements _CharacterListEntity {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CharacterListEntity &&
+            other is _$CharacterListEntityImpl &&
             (identical(other.info, info) || other.info == info) &&
             const DeepCollectionEquality().equals(other._results, _results));
   }
@@ -154,15 +154,15 @@ class _$_CharacterListEntity implements _CharacterListEntity {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CharacterListEntityCopyWith<_$_CharacterListEntity> get copyWith =>
-      __$$_CharacterListEntityCopyWithImpl<_$_CharacterListEntity>(
+  _$$CharacterListEntityImplCopyWith<_$CharacterListEntityImpl> get copyWith =>
+      __$$CharacterListEntityImplCopyWithImpl<_$CharacterListEntityImpl>(
           this, _$identity);
 }
 
 abstract class _CharacterListEntity implements CharacterListEntity {
   const factory _CharacterListEntity(
       {final PaginationInfoEntity info,
-      final List<CharacterEntity> results}) = _$_CharacterListEntity;
+      final List<CharacterEntity> results}) = _$CharacterListEntityImpl;
 
   @override
   PaginationInfoEntity get info;
@@ -170,6 +170,6 @@ abstract class _CharacterListEntity implements CharacterListEntity {
   List<CharacterEntity> get results;
   @override
   @JsonKey(ignore: true)
-  _$$_CharacterListEntityCopyWith<_$_CharacterListEntity> get copyWith =>
+  _$$CharacterListEntityImplCopyWith<_$CharacterListEntityImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

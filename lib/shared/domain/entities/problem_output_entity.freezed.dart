@@ -57,22 +57,22 @@ class _$ProblemOutputEntityCopyWithImpl<$Res, $Val extends ProblemOutputEntity>
 }
 
 /// @nodoc
-abstract class _$$_ProblemOutputEntityCopyWith<$Res>
+abstract class _$$ProblemOutputEntityImplCopyWith<$Res>
     implements $ProblemOutputEntityCopyWith<$Res> {
-  factory _$$_ProblemOutputEntityCopyWith(_$_ProblemOutputEntity value,
-          $Res Function(_$_ProblemOutputEntity) then) =
-      __$$_ProblemOutputEntityCopyWithImpl<$Res>;
+  factory _$$ProblemOutputEntityImplCopyWith(_$ProblemOutputEntityImpl value,
+          $Res Function(_$ProblemOutputEntityImpl) then) =
+      __$$ProblemOutputEntityImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String error});
 }
 
 /// @nodoc
-class __$$_ProblemOutputEntityCopyWithImpl<$Res>
-    extends _$ProblemOutputEntityCopyWithImpl<$Res, _$_ProblemOutputEntity>
-    implements _$$_ProblemOutputEntityCopyWith<$Res> {
-  __$$_ProblemOutputEntityCopyWithImpl(_$_ProblemOutputEntity _value,
-      $Res Function(_$_ProblemOutputEntity) _then)
+class __$$ProblemOutputEntityImplCopyWithImpl<$Res>
+    extends _$ProblemOutputEntityCopyWithImpl<$Res, _$ProblemOutputEntityImpl>
+    implements _$$ProblemOutputEntityImplCopyWith<$Res> {
+  __$$ProblemOutputEntityImplCopyWithImpl(_$ProblemOutputEntityImpl _value,
+      $Res Function(_$ProblemOutputEntityImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -80,7 +80,7 @@ class __$$_ProblemOutputEntityCopyWithImpl<$Res>
   $Res call({
     Object? error = null,
   }) {
-    return _then(_$_ProblemOutputEntity(
+    return _then(_$ProblemOutputEntityImpl(
       error: null == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
@@ -91,8 +91,8 @@ class __$$_ProblemOutputEntityCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_ProblemOutputEntity implements _ProblemOutputEntity {
-  const _$_ProblemOutputEntity({this.error = ''});
+class _$ProblemOutputEntityImpl implements _ProblemOutputEntity {
+  const _$ProblemOutputEntityImpl({this.error = ''});
 
   @override
   @JsonKey()
@@ -107,7 +107,7 @@ class _$_ProblemOutputEntity implements _ProblemOutputEntity {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ProblemOutputEntity &&
+            other is _$ProblemOutputEntityImpl &&
             (identical(other.error, error) || other.error == error));
   }
 
@@ -117,19 +117,19 @@ class _$_ProblemOutputEntity implements _ProblemOutputEntity {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ProblemOutputEntityCopyWith<_$_ProblemOutputEntity> get copyWith =>
-      __$$_ProblemOutputEntityCopyWithImpl<_$_ProblemOutputEntity>(
+  _$$ProblemOutputEntityImplCopyWith<_$ProblemOutputEntityImpl> get copyWith =>
+      __$$ProblemOutputEntityImplCopyWithImpl<_$ProblemOutputEntityImpl>(
           this, _$identity);
 }
 
 abstract class _ProblemOutputEntity implements ProblemOutputEntity {
   const factory _ProblemOutputEntity({final String error}) =
-      _$_ProblemOutputEntity;
+      _$ProblemOutputEntityImpl;
 
   @override
   String get error;
   @override
   @JsonKey(ignore: true)
-  _$$_ProblemOutputEntityCopyWith<_$_ProblemOutputEntity> get copyWith =>
+  _$$ProblemOutputEntityImplCopyWith<_$ProblemOutputEntityImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
