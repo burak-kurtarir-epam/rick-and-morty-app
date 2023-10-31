@@ -154,11 +154,11 @@ class _$CharacterEntityCopyWithImpl<$Res, $Val extends CharacterEntity>
 }
 
 /// @nodoc
-abstract class _$$_CharacterEntityCopyWith<$Res>
+abstract class _$$CharacterEntityImplCopyWith<$Res>
     implements $CharacterEntityCopyWith<$Res> {
-  factory _$$_CharacterEntityCopyWith(
-          _$_CharacterEntity value, $Res Function(_$_CharacterEntity) then) =
-      __$$_CharacterEntityCopyWithImpl<$Res>;
+  factory _$$CharacterEntityImplCopyWith(_$CharacterEntityImpl value,
+          $Res Function(_$CharacterEntityImpl) then) =
+      __$$CharacterEntityImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -182,11 +182,11 @@ abstract class _$$_CharacterEntityCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CharacterEntityCopyWithImpl<$Res>
-    extends _$CharacterEntityCopyWithImpl<$Res, _$_CharacterEntity>
-    implements _$$_CharacterEntityCopyWith<$Res> {
-  __$$_CharacterEntityCopyWithImpl(
-      _$_CharacterEntity _value, $Res Function(_$_CharacterEntity) _then)
+class __$$CharacterEntityImplCopyWithImpl<$Res>
+    extends _$CharacterEntityCopyWithImpl<$Res, _$CharacterEntityImpl>
+    implements _$$CharacterEntityImplCopyWith<$Res> {
+  __$$CharacterEntityImplCopyWithImpl(
+      _$CharacterEntityImpl _value, $Res Function(_$CharacterEntityImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -205,7 +205,7 @@ class __$$_CharacterEntityCopyWithImpl<$Res>
     Object? url = null,
     Object? created = freezed,
   }) {
-    return _then(_$_CharacterEntity(
+    return _then(_$CharacterEntityImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -260,8 +260,8 @@ class __$$_CharacterEntityCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_CharacterEntity implements _CharacterEntity {
-  const _$_CharacterEntity(
+class _$CharacterEntityImpl implements _CharacterEntity {
+  const _$CharacterEntityImpl(
       {this.id = 0,
       this.name = '',
       this.status = '',
@@ -327,7 +327,7 @@ class _$_CharacterEntity implements _CharacterEntity {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CharacterEntity &&
+            other is _$CharacterEntityImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.status, status) || other.status == status) &&
@@ -362,8 +362,9 @@ class _$_CharacterEntity implements _CharacterEntity {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CharacterEntityCopyWith<_$_CharacterEntity> get copyWith =>
-      __$$_CharacterEntityCopyWithImpl<_$_CharacterEntity>(this, _$identity);
+  _$$CharacterEntityImplCopyWith<_$CharacterEntityImpl> get copyWith =>
+      __$$CharacterEntityImplCopyWithImpl<_$CharacterEntityImpl>(
+          this, _$identity);
 }
 
 abstract class _CharacterEntity implements CharacterEntity {
@@ -379,7 +380,7 @@ abstract class _CharacterEntity implements CharacterEntity {
       final String image,
       final List<String> episode,
       final String url,
-      final DateTime? created}) = _$_CharacterEntity;
+      final DateTime? created}) = _$CharacterEntityImpl;
 
   @override
   int get id;
@@ -407,7 +408,7 @@ abstract class _CharacterEntity implements CharacterEntity {
   DateTime? get created;
   @override
   @JsonKey(ignore: true)
-  _$$_CharacterEntityCopyWith<_$_CharacterEntity> get copyWith =>
+  _$$CharacterEntityImplCopyWith<_$CharacterEntityImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -461,23 +462,25 @@ class _$CharacterLocationEntityCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_CharacterLocationEntityCopyWith<$Res>
+abstract class _$$CharacterLocationEntityImplCopyWith<$Res>
     implements $CharacterLocationEntityCopyWith<$Res> {
-  factory _$$_CharacterLocationEntityCopyWith(_$_CharacterLocationEntity value,
-          $Res Function(_$_CharacterLocationEntity) then) =
-      __$$_CharacterLocationEntityCopyWithImpl<$Res>;
+  factory _$$CharacterLocationEntityImplCopyWith(
+          _$CharacterLocationEntityImpl value,
+          $Res Function(_$CharacterLocationEntityImpl) then) =
+      __$$CharacterLocationEntityImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String name, String url});
 }
 
 /// @nodoc
-class __$$_CharacterLocationEntityCopyWithImpl<$Res>
+class __$$CharacterLocationEntityImplCopyWithImpl<$Res>
     extends _$CharacterLocationEntityCopyWithImpl<$Res,
-        _$_CharacterLocationEntity>
-    implements _$$_CharacterLocationEntityCopyWith<$Res> {
-  __$$_CharacterLocationEntityCopyWithImpl(_$_CharacterLocationEntity _value,
-      $Res Function(_$_CharacterLocationEntity) _then)
+        _$CharacterLocationEntityImpl>
+    implements _$$CharacterLocationEntityImplCopyWith<$Res> {
+  __$$CharacterLocationEntityImplCopyWithImpl(
+      _$CharacterLocationEntityImpl _value,
+      $Res Function(_$CharacterLocationEntityImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -486,7 +489,7 @@ class __$$_CharacterLocationEntityCopyWithImpl<$Res>
     Object? name = null,
     Object? url = null,
   }) {
-    return _then(_$_CharacterLocationEntity(
+    return _then(_$CharacterLocationEntityImpl(
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -501,8 +504,8 @@ class __$$_CharacterLocationEntityCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_CharacterLocationEntity implements _CharacterLocationEntity {
-  const _$_CharacterLocationEntity({this.name = '', this.url = ''});
+class _$CharacterLocationEntityImpl implements _CharacterLocationEntity {
+  const _$CharacterLocationEntityImpl({this.name = '', this.url = ''});
 
   @override
   @JsonKey()
@@ -520,7 +523,7 @@ class _$_CharacterLocationEntity implements _CharacterLocationEntity {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CharacterLocationEntity &&
+            other is _$CharacterLocationEntityImpl &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.url, url) || other.url == url));
   }
@@ -531,15 +534,14 @@ class _$_CharacterLocationEntity implements _CharacterLocationEntity {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CharacterLocationEntityCopyWith<_$_CharacterLocationEntity>
-      get copyWith =>
-          __$$_CharacterLocationEntityCopyWithImpl<_$_CharacterLocationEntity>(
-              this, _$identity);
+  _$$CharacterLocationEntityImplCopyWith<_$CharacterLocationEntityImpl>
+      get copyWith => __$$CharacterLocationEntityImplCopyWithImpl<
+          _$CharacterLocationEntityImpl>(this, _$identity);
 }
 
 abstract class _CharacterLocationEntity implements CharacterLocationEntity {
   const factory _CharacterLocationEntity(
-      {final String name, final String url}) = _$_CharacterLocationEntity;
+      {final String name, final String url}) = _$CharacterLocationEntityImpl;
 
   @override
   String get name;
@@ -547,6 +549,6 @@ abstract class _CharacterLocationEntity implements CharacterLocationEntity {
   String get url;
   @override
   @JsonKey(ignore: true)
-  _$$_CharacterLocationEntityCopyWith<_$_CharacterLocationEntity>
+  _$$CharacterLocationEntityImplCopyWith<_$CharacterLocationEntityImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

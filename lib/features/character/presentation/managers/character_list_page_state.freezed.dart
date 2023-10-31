@@ -86,11 +86,12 @@ class _$CharacterListPageStateCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_CharacterListPageStateCopyWith<$Res>
+abstract class _$$CharacterListPageStateImplCopyWith<$Res>
     implements $CharacterListPageStateCopyWith<$Res> {
-  factory _$$_CharacterListPageStateCopyWith(_$_CharacterListPageState value,
-          $Res Function(_$_CharacterListPageState) then) =
-      __$$_CharacterListPageStateCopyWithImpl<$Res>;
+  factory _$$CharacterListPageStateImplCopyWith(
+          _$CharacterListPageStateImpl value,
+          $Res Function(_$CharacterListPageStateImpl) then) =
+      __$$CharacterListPageStateImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -103,12 +104,13 @@ abstract class _$$_CharacterListPageStateCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CharacterListPageStateCopyWithImpl<$Res>
+class __$$CharacterListPageStateImplCopyWithImpl<$Res>
     extends _$CharacterListPageStateCopyWithImpl<$Res,
-        _$_CharacterListPageState>
-    implements _$$_CharacterListPageStateCopyWith<$Res> {
-  __$$_CharacterListPageStateCopyWithImpl(_$_CharacterListPageState _value,
-      $Res Function(_$_CharacterListPageState) _then)
+        _$CharacterListPageStateImpl>
+    implements _$$CharacterListPageStateImplCopyWith<$Res> {
+  __$$CharacterListPageStateImplCopyWithImpl(
+      _$CharacterListPageStateImpl _value,
+      $Res Function(_$CharacterListPageStateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -117,7 +119,7 @@ class __$$_CharacterListPageStateCopyWithImpl<$Res>
     Object? characterListEntity = null,
     Object? responseState = null,
   }) {
-    return _then(_$_CharacterListPageState(
+    return _then(_$CharacterListPageStateImpl(
       characterListEntity: null == characterListEntity
           ? _value.characterListEntity
           : characterListEntity // ignore: cast_nullable_to_non_nullable
@@ -132,8 +134,8 @@ class __$$_CharacterListPageStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_CharacterListPageState implements _CharacterListPageState {
-  const _$_CharacterListPageState(
+class _$CharacterListPageStateImpl implements _CharacterListPageState {
+  const _$CharacterListPageStateImpl(
       {this.characterListEntity = const CharacterListEntity(),
       this.responseState = const ResponseState.initial()});
 
@@ -153,7 +155,7 @@ class _$_CharacterListPageState implements _CharacterListPageState {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CharacterListPageState &&
+            other is _$CharacterListPageStateImpl &&
             (identical(other.characterListEntity, characterListEntity) ||
                 other.characterListEntity == characterListEntity) &&
             (identical(other.responseState, responseState) ||
@@ -167,15 +169,15 @@ class _$_CharacterListPageState implements _CharacterListPageState {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CharacterListPageStateCopyWith<_$_CharacterListPageState> get copyWith =>
-      __$$_CharacterListPageStateCopyWithImpl<_$_CharacterListPageState>(
-          this, _$identity);
+  _$$CharacterListPageStateImplCopyWith<_$CharacterListPageStateImpl>
+      get copyWith => __$$CharacterListPageStateImplCopyWithImpl<
+          _$CharacterListPageStateImpl>(this, _$identity);
 }
 
 abstract class _CharacterListPageState implements CharacterListPageState {
   const factory _CharacterListPageState(
       {final CharacterListEntity characterListEntity,
-      final ResponseState responseState}) = _$_CharacterListPageState;
+      final ResponseState responseState}) = _$CharacterListPageStateImpl;
 
   @override
   CharacterListEntity get characterListEntity;
@@ -183,6 +185,6 @@ abstract class _CharacterListPageState implements CharacterListPageState {
   ResponseState get responseState;
   @override
   @JsonKey(ignore: true)
-  _$$_CharacterListPageStateCopyWith<_$_CharacterListPageState> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$CharacterListPageStateImplCopyWith<_$CharacterListPageStateImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

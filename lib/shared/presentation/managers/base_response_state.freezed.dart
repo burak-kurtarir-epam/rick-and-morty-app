@@ -87,25 +87,25 @@ class _$ResponseStateCopyWithImpl<$Res, $Val extends ResponseState>
 }
 
 /// @nodoc
-abstract class _$$InitialStateCopyWith<$Res> {
-  factory _$$InitialStateCopyWith(
-          _$InitialState value, $Res Function(_$InitialState) then) =
-      __$$InitialStateCopyWithImpl<$Res>;
+abstract class _$$InitialStateImplCopyWith<$Res> {
+  factory _$$InitialStateImplCopyWith(
+          _$InitialStateImpl value, $Res Function(_$InitialStateImpl) then) =
+      __$$InitialStateImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$InitialStateCopyWithImpl<$Res>
-    extends _$ResponseStateCopyWithImpl<$Res, _$InitialState>
-    implements _$$InitialStateCopyWith<$Res> {
-  __$$InitialStateCopyWithImpl(
-      _$InitialState _value, $Res Function(_$InitialState) _then)
+class __$$InitialStateImplCopyWithImpl<$Res>
+    extends _$ResponseStateCopyWithImpl<$Res, _$InitialStateImpl>
+    implements _$$InitialStateImplCopyWith<$Res> {
+  __$$InitialStateImplCopyWithImpl(
+      _$InitialStateImpl _value, $Res Function(_$InitialStateImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$InitialState extends InitialState {
-  const _$InitialState() : super._();
+class _$InitialStateImpl extends InitialState {
+  const _$InitialStateImpl() : super._();
 
   @override
   String toString() {
@@ -115,7 +115,7 @@ class _$InitialState extends InitialState {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$InitialState);
+        (other.runtimeType == runtimeType && other is _$InitialStateImpl);
   }
 
   @override
@@ -197,30 +197,30 @@ class _$InitialState extends InitialState {
 }
 
 abstract class InitialState extends ResponseState {
-  const factory InitialState() = _$InitialState;
+  const factory InitialState() = _$InitialStateImpl;
   const InitialState._() : super._();
 }
 
 /// @nodoc
-abstract class _$$LoadingStateCopyWith<$Res> {
-  factory _$$LoadingStateCopyWith(
-          _$LoadingState value, $Res Function(_$LoadingState) then) =
-      __$$LoadingStateCopyWithImpl<$Res>;
+abstract class _$$LoadingStateImplCopyWith<$Res> {
+  factory _$$LoadingStateImplCopyWith(
+          _$LoadingStateImpl value, $Res Function(_$LoadingStateImpl) then) =
+      __$$LoadingStateImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$LoadingStateCopyWithImpl<$Res>
-    extends _$ResponseStateCopyWithImpl<$Res, _$LoadingState>
-    implements _$$LoadingStateCopyWith<$Res> {
-  __$$LoadingStateCopyWithImpl(
-      _$LoadingState _value, $Res Function(_$LoadingState) _then)
+class __$$LoadingStateImplCopyWithImpl<$Res>
+    extends _$ResponseStateCopyWithImpl<$Res, _$LoadingStateImpl>
+    implements _$$LoadingStateImplCopyWith<$Res> {
+  __$$LoadingStateImplCopyWithImpl(
+      _$LoadingStateImpl _value, $Res Function(_$LoadingStateImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$LoadingState extends LoadingState {
-  const _$LoadingState() : super._();
+class _$LoadingStateImpl extends LoadingState {
+  const _$LoadingStateImpl() : super._();
 
   @override
   String toString() {
@@ -230,7 +230,7 @@ class _$LoadingState extends LoadingState {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LoadingState);
+        (other.runtimeType == runtimeType && other is _$LoadingStateImpl);
   }
 
   @override
@@ -312,30 +312,30 @@ class _$LoadingState extends LoadingState {
 }
 
 abstract class LoadingState extends ResponseState {
-  const factory LoadingState() = _$LoadingState;
+  const factory LoadingState() = _$LoadingStateImpl;
   const LoadingState._() : super._();
 }
 
 /// @nodoc
-abstract class _$$SuccessStateCopyWith<$Res> {
-  factory _$$SuccessStateCopyWith(
-          _$SuccessState value, $Res Function(_$SuccessState) then) =
-      __$$SuccessStateCopyWithImpl<$Res>;
+abstract class _$$SuccessStateImplCopyWith<$Res> {
+  factory _$$SuccessStateImplCopyWith(
+          _$SuccessStateImpl value, $Res Function(_$SuccessStateImpl) then) =
+      __$$SuccessStateImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$SuccessStateCopyWithImpl<$Res>
-    extends _$ResponseStateCopyWithImpl<$Res, _$SuccessState>
-    implements _$$SuccessStateCopyWith<$Res> {
-  __$$SuccessStateCopyWithImpl(
-      _$SuccessState _value, $Res Function(_$SuccessState) _then)
+class __$$SuccessStateImplCopyWithImpl<$Res>
+    extends _$ResponseStateCopyWithImpl<$Res, _$SuccessStateImpl>
+    implements _$$SuccessStateImplCopyWith<$Res> {
+  __$$SuccessStateImplCopyWithImpl(
+      _$SuccessStateImpl _value, $Res Function(_$SuccessStateImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$SuccessState extends SuccessState {
-  const _$SuccessState() : super._();
+class _$SuccessStateImpl extends SuccessState {
+  const _$SuccessStateImpl() : super._();
 
   @override
   String toString() {
@@ -345,7 +345,7 @@ class _$SuccessState extends SuccessState {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$SuccessState);
+        (other.runtimeType == runtimeType && other is _$SuccessStateImpl);
   }
 
   @override
@@ -427,25 +427,25 @@ class _$SuccessState extends SuccessState {
 }
 
 abstract class SuccessState extends ResponseState {
-  const factory SuccessState() = _$SuccessState;
+  const factory SuccessState() = _$SuccessStateImpl;
   const SuccessState._() : super._();
 }
 
 /// @nodoc
-abstract class _$$ErrorStateCopyWith<$Res> {
-  factory _$$ErrorStateCopyWith(
-          _$ErrorState value, $Res Function(_$ErrorState) then) =
-      __$$ErrorStateCopyWithImpl<$Res>;
+abstract class _$$ErrorStateImplCopyWith<$Res> {
+  factory _$$ErrorStateImplCopyWith(
+          _$ErrorStateImpl value, $Res Function(_$ErrorStateImpl) then) =
+      __$$ErrorStateImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String message});
 }
 
 /// @nodoc
-class __$$ErrorStateCopyWithImpl<$Res>
-    extends _$ResponseStateCopyWithImpl<$Res, _$ErrorState>
-    implements _$$ErrorStateCopyWith<$Res> {
-  __$$ErrorStateCopyWithImpl(
-      _$ErrorState _value, $Res Function(_$ErrorState) _then)
+class __$$ErrorStateImplCopyWithImpl<$Res>
+    extends _$ResponseStateCopyWithImpl<$Res, _$ErrorStateImpl>
+    implements _$$ErrorStateImplCopyWith<$Res> {
+  __$$ErrorStateImplCopyWithImpl(
+      _$ErrorStateImpl _value, $Res Function(_$ErrorStateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -453,7 +453,7 @@ class __$$ErrorStateCopyWithImpl<$Res>
   $Res call({
     Object? message = null,
   }) {
-    return _then(_$ErrorState(
+    return _then(_$ErrorStateImpl(
       message: null == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
@@ -464,8 +464,8 @@ class __$$ErrorStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ErrorState extends ErrorState {
-  const _$ErrorState({this.message = _kDefaultErrorMessage}) : super._();
+class _$ErrorStateImpl extends ErrorState {
+  const _$ErrorStateImpl({this.message = _kDefaultErrorMessage}) : super._();
 
   @override
   @JsonKey()
@@ -480,7 +480,7 @@ class _$ErrorState extends ErrorState {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ErrorState &&
+            other is _$ErrorStateImpl &&
             (identical(other.message, message) || other.message == message));
   }
 
@@ -490,8 +490,8 @@ class _$ErrorState extends ErrorState {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$ErrorStateCopyWith<_$ErrorState> get copyWith =>
-      __$$ErrorStateCopyWithImpl<_$ErrorState>(this, _$identity);
+  _$$ErrorStateImplCopyWith<_$ErrorStateImpl> get copyWith =>
+      __$$ErrorStateImplCopyWithImpl<_$ErrorStateImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -569,11 +569,11 @@ class _$ErrorState extends ErrorState {
 }
 
 abstract class ErrorState extends ResponseState {
-  const factory ErrorState({final String message}) = _$ErrorState;
+  const factory ErrorState({final String message}) = _$ErrorStateImpl;
   const ErrorState._() : super._();
 
   String get message;
   @JsonKey(ignore: true)
-  _$$ErrorStateCopyWith<_$ErrorState> get copyWith =>
+  _$$ErrorStateImplCopyWith<_$ErrorStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

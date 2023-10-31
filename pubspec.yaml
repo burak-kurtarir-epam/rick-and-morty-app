@@ -32,6 +32,7 @@ dependencies:
     sdk: flutter
 
   # Network
+  http: ^1.1.0
   chopper: ^7.0.6
   rm_api_services:
     path: packages/rm_api_services

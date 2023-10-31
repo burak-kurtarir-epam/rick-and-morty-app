@@ -76,22 +76,22 @@ class _$PaginationInfoEntityCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_PaginationInfoEntityCopyWith<$Res>
+abstract class _$$PaginationInfoEntityImplCopyWith<$Res>
     implements $PaginationInfoEntityCopyWith<$Res> {
-  factory _$$_PaginationInfoEntityCopyWith(_$_PaginationInfoEntity value,
-          $Res Function(_$_PaginationInfoEntity) then) =
-      __$$_PaginationInfoEntityCopyWithImpl<$Res>;
+  factory _$$PaginationInfoEntityImplCopyWith(_$PaginationInfoEntityImpl value,
+          $Res Function(_$PaginationInfoEntityImpl) then) =
+      __$$PaginationInfoEntityImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int count, int pages, String next, String prev});
 }
 
 /// @nodoc
-class __$$_PaginationInfoEntityCopyWithImpl<$Res>
-    extends _$PaginationInfoEntityCopyWithImpl<$Res, _$_PaginationInfoEntity>
-    implements _$$_PaginationInfoEntityCopyWith<$Res> {
-  __$$_PaginationInfoEntityCopyWithImpl(_$_PaginationInfoEntity _value,
-      $Res Function(_$_PaginationInfoEntity) _then)
+class __$$PaginationInfoEntityImplCopyWithImpl<$Res>
+    extends _$PaginationInfoEntityCopyWithImpl<$Res, _$PaginationInfoEntityImpl>
+    implements _$$PaginationInfoEntityImplCopyWith<$Res> {
+  __$$PaginationInfoEntityImplCopyWithImpl(_$PaginationInfoEntityImpl _value,
+      $Res Function(_$PaginationInfoEntityImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -102,7 +102,7 @@ class __$$_PaginationInfoEntityCopyWithImpl<$Res>
     Object? next = null,
     Object? prev = null,
   }) {
-    return _then(_$_PaginationInfoEntity(
+    return _then(_$PaginationInfoEntityImpl(
       count: null == count
           ? _value.count
           : count // ignore: cast_nullable_to_non_nullable
@@ -125,8 +125,8 @@ class __$$_PaginationInfoEntityCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_PaginationInfoEntity implements _PaginationInfoEntity {
-  const _$_PaginationInfoEntity(
+class _$PaginationInfoEntityImpl implements _PaginationInfoEntity {
+  const _$PaginationInfoEntityImpl(
       {this.count = 0, this.pages = 0, this.next = '', this.prev = ''});
 
   @override
@@ -151,7 +151,7 @@ class _$_PaginationInfoEntity implements _PaginationInfoEntity {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PaginationInfoEntity &&
+            other is _$PaginationInfoEntityImpl &&
             (identical(other.count, count) || other.count == count) &&
             (identical(other.pages, pages) || other.pages == pages) &&
             (identical(other.next, next) || other.next == next) &&
@@ -164,9 +164,10 @@ class _$_PaginationInfoEntity implements _PaginationInfoEntity {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PaginationInfoEntityCopyWith<_$_PaginationInfoEntity> get copyWith =>
-      __$$_PaginationInfoEntityCopyWithImpl<_$_PaginationInfoEntity>(
-          this, _$identity);
+  _$$PaginationInfoEntityImplCopyWith<_$PaginationInfoEntityImpl>
+      get copyWith =>
+          __$$PaginationInfoEntityImplCopyWithImpl<_$PaginationInfoEntityImpl>(
+              this, _$identity);
 }
 
 abstract class _PaginationInfoEntity implements PaginationInfoEntity {
@@ -174,7 +175,7 @@ abstract class _PaginationInfoEntity implements PaginationInfoEntity {
       {final int count,
       final int pages,
       final String next,
-      final String prev}) = _$_PaginationInfoEntity;
+      final String prev}) = _$PaginationInfoEntityImpl;
 
   @override
   int get count;
@@ -186,6 +187,6 @@ abstract class _PaginationInfoEntity implements PaginationInfoEntity {
   String get prev;
   @override
   @JsonKey(ignore: true)
-  _$$_PaginationInfoEntityCopyWith<_$_PaginationInfoEntity> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$PaginationInfoEntityImplCopyWith<_$PaginationInfoEntityImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
