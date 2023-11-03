@@ -20,7 +20,10 @@ jobs:
           flutter-version: '3.13.1'
           channel: 'stable'
           cache: true
+      - name: List directories
+        run: |
+          ls
       - name: Get all packages
-        run: ../../scripts/get_all.sh
+        run: ./scripts/get_all.sh
       - name: Test all packages
-        run: ../../scripts/test_all.sh
+        run: ./scripts/test_all.sh
