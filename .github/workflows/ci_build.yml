@@ -36,6 +36,8 @@ jobs:
         with:
           flutter-version: '3.13.1'
           channel: 'stable'
-      - run: flutter pub get
-      - run: flutter build appbundle
+      - name: Get dependencies
+        run: flutter pub get
+      - name: Build android appbundle
+        run: flutter build appbundle
   

@@ -6,7 +6,7 @@ on:
 
 jobs:
   flutter_test:
-    name: Run flutter test and analyze
+    name: Run flutter test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -14,10 +14,14 @@ jobs:
         with:
           distribution: 'zulu'
           java-version: "12.x"
+          cache: 'gradle'
       - uses: subosito/flutter-action@v2
         with:
           flutter-version: '3.13.1'
           channel: 'stable'
-      - run: flutter pub get
-      - run: flutter analyze
-      - run: flutter test
+          cache: true
+      - uses: bluefireteam/melos-action@v1
+      - name: Install dependencies for all packages
+        run: melos build:pub_get:all
+      - name: Test all packages
+        run: ../../scripts/test_all.sh
