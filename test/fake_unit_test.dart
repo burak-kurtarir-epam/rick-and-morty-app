@@ -9,7 +9,7 @@ void main() {
     expect(1 + 1, 2);
   });
 
-  test('3 * 3 = 9', () {
+  test('3 * 5 = 15', () {
     expect(3 * 3, 9);
   });
 
