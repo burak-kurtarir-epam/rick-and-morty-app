@@ -10,3 +10,6 @@ get_all:
 
 gen_all:
 	scripts/gen_all.sh
+
+test_all:
+	scripts/test_all.sh
