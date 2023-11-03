@@ -20,9 +20,23 @@ jobs:
           flutter-version: '3.13.1'
           channel: 'stable'
           cache: true
+
       - name: Get all packages
         run: ./scripts/get_all.sh
+
       - name: Test all packages
         run: ./scripts/test_all.sh
+
       - name: Build Android Debug APK
         run: flutter build apk --flavor dev --debug
+
+      - name: Deploy Android Debug APK to Firebase App Distribution
+        run: |
+          npm install -g firebase-tools
+          firebase appdistribution:distribute ./build/app/outputs/flutter-apk/app-dev-debug.apk \
+            --app ${{ secrets.FIREBASE_APP_ID }} \
+            --token ${{ secrets.FIREBASE_TOKEN }} \
+            --release-notes "This is an automated build."
+        env:
+          FIREBASE_APP_ID: ${{ secrets.FIREBASE_APP_ID }}
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
